@@ -8,12 +8,10 @@
 | Banana Pi M2 Zero | Carte | – | – |
 | BME280 | Température, humidité, pression | `i2c0` | 0x76 |
 | Écran OLED SSD1306 | Affichage | `i2c1` | 0x3c |
-| Adaptateur USB-série 3,3 V | Console de débogage | – | – |
+| Adaptateur USB-série | Console de débogage | – | – |
 
 
 ### Câblage
-
-Brochage du connecteur 40 broches de la carte (compatible Raspberry Pi) :
 
 | Composant | Alimentation | Masse | SDA | SCL |
 |---|---|---|---|---|
@@ -102,7 +100,7 @@ Connexion : `root`, sans mot de passe.
 ```
 cat /sys/bus/iio/devices/iio:device0/name        # bme280
 cat /sys/bus/iio/devices/iio:device0/in_temp_input
-i2cdetect -y 0                                   # UU à 76 (capteur)
+i2cdetect -y 0                                   # UU (capteur)
 i2cdetect -y 1                                   # 3c (écran)
 ```
 
