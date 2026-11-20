@@ -17,8 +17,8 @@ Brochage du connecteur 40 broches de la carte (compatible Raspberry Pi) :
 
 | Composant | Alimentation | Masse | SDA | SCL |
 |---|---|---|---|---|
-| BME280 | broche 1 | broche 6 | broche 3 (TWI0) | broche 5 (TWI0) |
-| Écran SSD1306 | broche 17 | broche 9 | broche 27 (TWI1) | broche 28 (TWI1) |
+| BME280 | broche 1 | broche 6 | broche 3 | broche 5 |
+| Écran SSD1306 | broche 17 | broche 9 | broche 27 | broche 28 |
 
 
 ## Contenu du layer `meta-epita`
@@ -61,13 +61,13 @@ meta-epita/
 
 Le dossier de travail contient les dépôts suivants, clonés côte à côte, et le conteneur fourni pour le cours :
 
-Dépôt :
+Dépôts :
 
-- openembedded-core`
-- bitbake`
+- openembedded-core
+- bitbake
 - meta-openembedded
 - meta-arm
-- meta-epita` 
+- meta-epita 
 
 
 ## Flasher la carte SD
