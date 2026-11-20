@@ -365,7 +365,7 @@ int main(int argc, char **argv)
 		render(height);
 		if (screen_flush() < 0) {
 			if (!failing) /* un seul message par série d'échecs */
-				fprintf(stderr, Screen Lecture is impossible\n");
+				fprintf(stderr, "Screen Lecture is impossible\n");
 			failing = 1;
 		} else {
 			failing = 0;

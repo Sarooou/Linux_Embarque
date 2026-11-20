@@ -23,7 +23,6 @@ KRELEASE = "${@d.getVar('PV', True).split('.')[0]}"
 
 SRC_URI = "https://www.kernel.org/pub/linux/kernel/v${KRELEASE}.x/linux-${PV}.tar.xz \
        file://defconfig \
-       file://sunxi-kmeta;type=kmeta;name=sunxi-kmeta;destsuffix=sunxi-kmeta \
 "
 
 SRC_URI:append:use-mailine-graphics = " file://drm.cfg"
@@ -36,3 +35,4 @@ SRC_URI:append:bananapi-m2-zero = " file://patches/0003-dts-allwinner-bananapi-m
 
 # Capteur BPM280
 SRC_URI:append:bananapi-m2-zero = " file://bme280.cfg"
+SRC_URI:append:bananapi-m2-zero = " file://patches/0004-dts-enable-i2c0-bme280-and-i2c1.patch"

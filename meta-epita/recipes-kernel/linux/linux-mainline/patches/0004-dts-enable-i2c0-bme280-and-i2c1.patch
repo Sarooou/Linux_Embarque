@@ -1,0 +1,23 @@
+dts: enable i2c0 (BME280) and i2c1 on Banana Pi M2 Zero
+
+Upstream-Status: Inappropriate [configuration]
+
+--- a/arch/arm/boot/dts/allwinner/sun8i-h2-plus-bananapi-m2-zero.dts
++++ b/arch/arm/boot/dts/allwinner/sun8i-h2-plus-bananapi-m2-zero.dts
+@@ -271,3 +271,16 @@
+ 	 */
+ 	status = "okay";
+ };
++
++&i2c0 {
++	status = "okay";
++
++	bme280@76 {
++		compatible = "bosch,bme280";
++		reg = <0x76>;
++	};
++};
++
++&i2c1 {
++	status = "okay";
++};
